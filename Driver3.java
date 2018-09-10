@@ -17,35 +17,45 @@ public class Driver3{
 		//System.out.println(x.contains("@"));
 			if(x.contains("@")){
 				//System.out.println(x.contains("@"));
-				if(x.contains(".")){
+				if(x.indexOf("@")==x.lastIndexOf("@")){
+					if(x.contains(".")){
 					//System.out.println(x.contains("."));
-					if(x.indexOf("@")>0){
+							if(x.indexOf("@")>0){
 						//System.out.println(x.indexOf("@")>0);
-						int a=x.length();
-						int y=x.indexOf(".");
-						int z=a-y;
-						if(z<5){
-							System.out.println("valid email");
-							System.out.println("Thank You!!");
-
-						}else{
-							System.out.println("Invalid email Address");
-							System.out.println("Please Try Again....");
-						}
+								int a=x.length();
+								int y=x.indexOf(".");
+								int z=a-y;
+								if(z<5){
+									System.out.println("valid email");
+									System.out.println("Thank You!!");
+								}else{
+									System.out.println("Invalid email Address");
+									System.out.println("Invalid sub domain");
+									System.out.println("Please Try Again....");
+								}
 						
+
+							}else{
+								System.out.println("Invalid email Address");
+								System.out.println("a@example.com");
+								System.out.println("Please Try Again....");
+							}
 
 					}else{
 						System.out.println("Invalid email Address");
+						System.out.println("Missing '.' ");
 						System.out.println("Please Try Again....");
 					}
-
 				}else{
 					System.out.println("Invalid email Address");
-					System.out.println("Please Try Again....");
+					System.out.println("Inserted 2 @s");
+					System.out.println("Please Enter Valid email....");
 				}
 				
+				
 			}else{
-				System.out.println("Invalid email Address");
+				System.out.println("This is not a e-mail Address");
+				System.out.println("Missing '@' ");
 				System.out.println("Please Try Again....");
 			}
 //................................................................................
@@ -56,6 +66,18 @@ public class Driver3{
 			int y=s1.indexOf(".");
 			int z=a-y;
 			System.out.println(z);*/
+
+			/*Scanner s = new Scanner(System.in);
+      		System.out.println("Enter String: ");
+        	String str = s.nextLine();
+
+        		for(int i=0;i<str.length()-1;i++){
+            		for(int j=i+1;j<str.length();j++){
+            				if(str.charAt(i)==str.charAt(j)){
+               					 System.out.print(str.charAt(j));
+            				}
+            		}
+        		}*/
 
 
 		}
